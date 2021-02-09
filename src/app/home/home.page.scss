@@ -1,0 +1,14 @@
+.spinner{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-label{
+    h2{
+        font-weight: bold;
+        color: rgb(44, 30, 30);
+    }
+    white-space: normal !important;
+}

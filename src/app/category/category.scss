@@ -1,0 +1,19 @@
+ion-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #50a39c;
+    border-radius: 50%;
+    margin:1rem 1rem;
+    padding: 2rem;
+
+    ion-img {
+        height: 10rem;
+    }
+
+    ion-label{
+        font-size: large;
+        font-weight: bold;
+    }
+}

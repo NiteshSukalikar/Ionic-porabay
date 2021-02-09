@@ -8,6 +8,7 @@ import { ContactPageModule } from '../contact/contact.module';
 import { AboutPageModule } from '../about/about.module';
 import { HomePageModule } from '../home/home.module';
 import { TabsPageRoutingModule } from './tabs-routing.module';
+import { MenuItemModule } from '../components/menu-item.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { TabsPageRoutingModule } from './tabs-routing.module';
     TabsPageRoutingModule,
     HomePageModule,
     AboutPageModule,
-    ContactPageModule
+    ContactPageModule,
+    MenuItemModule
   ],
   declarations: [TabsPage]
 })

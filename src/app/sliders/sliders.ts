@@ -14,7 +14,7 @@ export class SlidersPage implements OnInit {
   }
 
   login(){
-    this.router.navigateByUrl('login');
+    this.router.navigateByUrl('category');
   }
 
 }

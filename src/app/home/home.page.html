@@ -8,10 +8,28 @@
 </ion-header>
 
 <ion-content padding>
+  <div class="spinner" *ngIf="!domainDetails">
+    <ion-spinner name="bubbles"></ion-spinner>
+  </div>
+  <ion-item-sliding *ngFor="let details of domainDetails;">
+    <ion-item>
+      <ion-label>
+        <h2>{{details.domianID}}</h2>
+        <h2>{{details.title}}</h2>
+        <span>{{details.desciption}}</span>
+      </ion-label>
+      <ion-note slot="end">
+        10:45 AM
+      </ion-note>
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option color="danger">
+        <ion-icon slot="icon-only" name="trash" (click)="deleteItem(details.domianID)"></ion-icon>
+      </ion-item-option>
+      <ion-item-option>
+        <ion-icon slot="icon-only" name="star" (click)="onEdit(details)"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
 
-  <ion-item lines="none">
-    <ion-label class="ion-text-wrap">
-      <h2>Welcome To Home Page</h2>
-    </ion-label>
-  </ion-item>
 </ion-content>

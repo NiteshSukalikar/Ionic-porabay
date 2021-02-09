@@ -1,12 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
+import { Router, RouterEvent } from "@angular/router";
 
 @Component({
-  selector: 'app-tabs',
-  templateUrl: 'tabs.page.html',
-  styleUrls: ['tabs.page.scss']
+  selector: "app-tabs",
+  templateUrl: "tabs.page.html",
+  styleUrls: ["tabs.page.scss"],
 })
-export class TabsPage {
+export class TabsPage implements OnInit {
+  
+  public pages = [
+    {
+      title: "Contact",
+      url: "/tabs/contact",
+      icon: "person",
+    },
+    {
+      title: "About",
+      url: "/tabs/about",
+      icon: "information-circle",
+    },
+    {
+      title: "Home",
+      url: "/tabs/home",
+      icon: "map",
+    },
+  ];
+  constructor(private router: Router) {}
 
-  constructor() {}
+  ngOnInit() {
+    this.router.events.subscribe((event: RouterEvent) => {
+      this.pages.map((p) => {
+        return (p["active"] = event.url === p.url);
+      });
+    });
+  }
+
 
 }

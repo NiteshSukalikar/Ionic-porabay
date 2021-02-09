@@ -1,4 +1,4 @@
-<ion-item [routerLink]="link.url" [class.active-item]="link.active" routerDirection="root">
+<ion-item [class.active-item]="link.active" routerDirection="root" (click)="onMenuChange(link)">
   <ion-icon [name]="link.icon" slot="start"></ion-icon>
   <ion-label>{{link.title}}</ion-label>
 </ion-item>
