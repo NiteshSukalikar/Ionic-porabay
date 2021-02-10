@@ -25,11 +25,11 @@ export class HomePage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.fetch();
+    // this.fetch();
   }
 
   ionViewDidEnter() {
-    this.fetch();
+    // this.fetch();
   }
 
    fetch() {
