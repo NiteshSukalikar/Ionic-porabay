@@ -7,11 +7,18 @@ const routes: Routes = [
   { path: 'sliders', loadChildren: './sliders/sliders.module#SlidersModule' },
   { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'category', loadChildren: './category/category.module#CategoryModule' },
+
   {
     path: '',
     redirectTo: 'login',
     pathMatch:'full'
-  }
+  },  {
+    path: 'post',
+    loadChildren: () => import('./post/post.module').then( m => m.PostPageModule)
+  },
+
+
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
