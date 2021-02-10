@@ -24,6 +24,9 @@ export class TabsPage implements OnInit {
       url: "/tabs/home",
       icon: "map",
     },
+   
+
+   
   ];
   constructor(private router: Router) {}
 

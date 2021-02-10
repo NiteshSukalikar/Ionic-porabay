@@ -22,17 +22,17 @@ export class ContactPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.initForm();
-    this.route.queryParams.subscribe((params) => {
-      if (this.router.getCurrentNavigation().extras.state) {
-        this.tempDetails = this.router.getCurrentNavigation().extras.state.tempData;
-        this.Form.patchValue({
-          title: this.tempDetails.title,
-          desciption: this.tempDetails.desciption,
-        });
-        this.isEditing = true;
-      }
-    });
+     this.initForm();
+    // this.route.queryParams.subscribe((params) => {
+    //   if (this.router.getCurrentNavigation().extras.state) {
+    //     this.tempDetails = this.router.getCurrentNavigation().extras.state.tempData;
+    //     this.Form.patchValue({
+    //       title: this.tempDetails.title,
+    //       desciption: this.tempDetails.desciption,
+    //     });
+    //     this.isEditing = true;
+    //   }
+    // });
   }
 
   ionViewDidEnter() {
@@ -47,22 +47,24 @@ export class ContactPage implements OnInit {
   }
 
   onSubmit() {
-    if (this.isEditing == true) {
-      this.domainDataService
-        .updateDomainData(this.tempDetails.domianID, this.Form.value)
-        .subscribe((status) => {
-          console.log(status);
-        });
+    console.log("Working");
+    
+    // if (this.isEditing == true) {
+    //   this.domainDataService
+    //     .updateDomainData(this.tempDetails.domianID, this.Form.value)
+    //     .subscribe((status) => {
+    //       console.log(status);
+    //     });
 
-      this.isEditing = false;
-    } else {
-      this.domainDataService
-        .addDomainData(this.Form.value)
-        .subscribe((data: DomainData) => {
-          console.log(data);
-        });
-    }
-    this.router.navigate(["tabs"]);
-    this.Form.reset();
+    //   this.isEditing = false;
+    // } else {
+    //   this.domainDataService
+    //     .addDomainData(this.Form.value)
+    //     .subscribe((data: DomainData) => {
+    //       console.log(data);
+    //     });
+    // }
+    // this.router.navigate(["tabs"]);
+    // this.Form.reset();
   }
 }

@@ -10,6 +10,7 @@ import { HomePageModule } from '../home/home.module';
 import { TabsPageRoutingModule } from './tabs-routing.module';
 import { MenuItemModule } from '../components/menu-item.module';
 
+
 @NgModule({
   imports: [
     IonicModule,
@@ -19,7 +20,7 @@ import { MenuItemModule } from '../components/menu-item.module';
     HomePageModule,
     AboutPageModule,
     ContactPageModule,
-    MenuItemModule
+    MenuItemModule,
   ],
   declarations: [TabsPage]
 })

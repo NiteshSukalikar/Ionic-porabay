@@ -5,7 +5,7 @@ import { Injectable } from "@angular/core";
   providedIn: "root",
 })
 export class DomainDataService {
-  url = "http://niteshsukalikar-001-site1.ctempurl.com/domain";
+  url = "http://www.google.com";
   constructor(private http: HttpClient) {}
 
   fetchDomainData() {
