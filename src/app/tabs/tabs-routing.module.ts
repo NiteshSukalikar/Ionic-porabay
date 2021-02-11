@@ -25,6 +25,15 @@ const routes: Routes = [
         path: "contact",
         loadChildren: "../contact/contact.module#ContactPageModule",
       },
+      {
+        path: "settings",
+        loadChildren: "../settings/settings.module#SettingsPageModule",
+      },
+
+      {
+        path: "post",
+        loadChildren: "../post/post.module#PostPageModule",
+      },
     ],
   },
   {
