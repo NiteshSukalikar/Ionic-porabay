@@ -1,34 +1,35 @@
-.blue {
-    border: none;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    padding-top: 10px;
-    width: auto;
-    height: 294px;
-    border-radius: 0px 0px 12px 12px;
+.body {
+    height: 25%;
     background: #38c6e5;
-}
-.blank {
-    margin-top: 30px;
-    margin-left: 2%;
-    margin-right: 2%;
-    border: 0.1rem solid #000000;
-    width: auto;
-    height: auto;
-}
-.header {
-    margin-top: 30px;
-    font-size: 35px;
-    color: antiquewhite;
-}
-.account {
-    font-weight: bolder;
-}
-.more {
-    font-weight: bolder;
+    padding-top: 1rem;
+    position: relative;
 }
 
-.border {
-    --border-color: black;
+#header {
+    font-size: 2.5rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.subheader {
+    position: absolute;
+    width: 95%;
+    top: 30%;
+    ion-grid {
+        --ion-grid-padding: 0;
+        --ion-grid-width: 100%;
+
+        ion-row {
+            ion-col {
+                --ion-grid-column-padding: 0;
+            }
+        }
+        ion-label {
+            flex: auto;
+        }
+    }
 }

@@ -1,13 +1,15 @@
-ion-title {
-    border: none;
-    font-family: Inter;
-    font-style: normal;
+ion-item.item-has-focus > ion-label {
+    color: blue !important;
+  }
+  ion-item{
+   font-size: 2rem;
+
+   ion-label{
+    font-size: 2.5rem;
     font-weight: bold;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    color: #263238;
-}
+    margin-bottom: 15px;
+   }
+  }
 
 .tag {
     font-family: monospace;
