@@ -1,56 +1,55 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="home"></ion-back-button>
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Create Tag & Post it !</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-item class=tag>
-    <ion-label fixed>+ Add tag
-    </ion-label>
-  </ion-item>
 
-  <ion-item class="tag1">
-    <ion-input type="text"></ion-input>
-  </ion-item>
-
-  <ion-item class="image">
-    <ion-label fixed>
-      + Add Image
-    </ion-label>
-  </ion-item>
-
-  <ion-item class="images">
-    <ion-input type="text"></ion-input>
-  </ion-item>
-
-  <ion-item class="information">
-    <ion-label fixed>
-      + Write the Information here
-    </ion-label>
-  </ion-item>
-
-  <ion-item class="inform">
-    <ion-input type="text"></ion-input>
-  </ion-item>
-
-  <ion-item class="pos">
-    <ion-label fixed>
-      + Type of Post
-    </ion-label>
-  </ion-item>
-
-  <ion-item class="post">
-    <ion-input type="text"></ion-input>
-  </ion-item>
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating" color="dark">+ Add Tag</ion-label>
+          <ion-input placeholder="Enter The Tag" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating" color="dark">+ Add Image</ion-label>
+          <ion-textarea rows="1" cols="20" placeholder="Enter Description..."></ion-textarea>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating" color="dark">+ Write The Information Here .</ion-label>
+          <ion-textarea rows="4" cols="20" placeholder="Enter Description..."></ion-textarea>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating" color="dark">+ Type Post</ion-label>
+          <ion-textarea rows="4" cols="20" placeholder="Enter Post..."></ion-textarea>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button>
       <ion-icon name="arrow-forward-circle"></ion-icon>
     </ion-fab-button>
   </ion-fab>
+
+
 
 </ion-content>

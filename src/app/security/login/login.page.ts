@@ -23,6 +23,6 @@ export class LoginPage implements OnInit, OnDestroy {
   }
 
   login() {
-    this.router.navigate(["sliders"]);
+    this.router.navigate(["tabs"]);
   }
 }
