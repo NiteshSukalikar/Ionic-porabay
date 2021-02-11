@@ -8,14 +8,20 @@ const routes: Routes = [
   { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'category', loadChildren: './category/category.module#CategoryModule' },
 
+
   {
     path: '',
     redirectTo: 'login',
     pathMatch:'full'
-  },  {
+  },
+  {
     path: 'post',
     loadChildren: () => import('./post/post.module').then( m => m.PostPageModule)
+  },  {
+    path: 'privacy',
+    loadChildren: () => import('./privacy/privacy.module').then( m => m.PrivacyPageModule)
   },
+
 
 
 
