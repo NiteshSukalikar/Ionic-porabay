@@ -17,14 +17,7 @@ const routes: Routes = [
         path: "home",
         loadChildren: "../home/home.module#HomePageModule",
       },
-      {
-        path: "about",
-        loadChildren: "../about/about.module#AboutPageModule",
-      },
-      {
-        path: "contact",
-        loadChildren: "../contact/contact.module#ContactPageModule",
-      },
+
       {
         path: "settings",
         loadChildren: "../settings/settings.module#SettingsPageModule",
@@ -34,6 +27,15 @@ const routes: Routes = [
         path: "post",
         loadChildren: "../post/post.module#PostPageModule",
       },
+      {
+        path: "profile",
+        loadChildren: "../profile/profile.module#ProfilePageModule",
+      },
+      {
+        path: "search",
+        loadChildren: "../search/search.module#SearchPageModule",
+      },
+
     ],
   },
   {

@@ -17,10 +17,16 @@ const routes: Routes = [
   {
     path: 'post',
     loadChildren: () => import('./post/post.module').then( m => m.PostPageModule)
-  },  {
+  },
+  {
     path: 'privacy',
     loadChildren: () => import('./privacy/privacy.module').then( m => m.PrivacyPageModule)
+  },  {
+    path: 'search',
+    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
   },
+
+ 
 
 
 
