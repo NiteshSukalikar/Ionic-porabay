@@ -18,12 +18,12 @@ const routes: Routes = [
         loadChildren: "../home/home.module#HomePageModule",
       },
       {
-        path: "about",
-        loadChildren: "../about/about.module#AboutPageModule",
+        path: "search",
+        loadChildren: "../search/search.module#SearchPageModule",
       },
       {
-        path: "contact",
-        loadChildren: "../contact/contact.module#ContactPageModule",
+        path: "profile",
+        loadChildren: "../security/profile/profile.module#ProfilePageModule",
       },
       {
         path: "settings",

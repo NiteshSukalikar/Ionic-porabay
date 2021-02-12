@@ -25,3 +25,8 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+.toaster{
+    --background:var(--ion-color-primary);
+    --color:white;
+    font-size: 2rem;
+}
