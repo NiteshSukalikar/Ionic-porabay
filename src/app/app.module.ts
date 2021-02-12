@@ -12,6 +12,7 @@ import { AppComponent } from "./app.component";
 import { MenuItemModule } from "./components/menu-item.module";
 import { DomainDataService } from "./home/domain-data.service";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ToasterService } from "./shared/toaster.service";
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,7 +30,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    DomainDataService
+    DomainDataService,
+    ToasterService
   ],
   bootstrap: [AppComponent],
 })

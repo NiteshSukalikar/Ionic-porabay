@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Search Result</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-segment scrollable value="heart" [(ngModel)]="segment">
+    <ion-segment-button value="all">
+      <ion-label>All</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="trusted">
+      <ion-label>Trusted</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="followed">
+      <ion-label>Followed</ion-label>
+    </ion-segment-button>
+    <!-- <ion-segment-button value="product">
+      <ion-label>Product</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="info">
+      <ion-label>Info</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="jobs">
+      <ion-label>Jobs</ion-label>
+    </ion-segment-button> -->
+  </ion-segment>
+
+  <div [ngSwitch]="segment">
+    <ion-card *ngSwitchCase="'all'">
+      <ion-item>
+        <span>
+          Card layouts can vary to support the types of content they contain. The
+          following elements are commonly found among that variety.
+        </span>
+      </ion-item>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'trusted'">
+      <ion-item>
+        <span>
+          Card layouts can vary to support the types of content they contain. The
+          following elements are commonly found among that variety.
+        </span>
+      </ion-item>
+      <ion-item>
+        <ion-label color="dark">Trusted/agreed by Trusted</ion-label>
+        <div>
+          <ion-icon class="background" color="primary" slot="end" name="information-circle-outline"></ion-icon>
+          <ion-icon class="background" color="primary" slot="end" name="close-circle-outline"></ion-icon>
+          <ion-icon class="background" color="primary" slot="end" name="chatbubbles"></ion-icon>
+          <ion-icon class="background" color="primary" slot="end" name="add"></ion-icon>
+        </div>
+
+
+      </ion-item>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'followed'">
+      <ion-item>
+        <span>
+          Card layouts can vary to support the types of content they contain. The
+          following elements are commonly found among that variety.
+        </span>
+      </ion-item>
+      <ion-item>
+        <ion-label color="dark">Trusted/agreed by Followed</ion-label>
+        <div>
+          <ion-icon class="background" color="primary" slot="end" name="information-circle-outline"></ion-icon>
+          <ion-icon class="background" color="primary" slot="end" name="close-circle-outline"></ion-icon>
+          <ion-icon class="background" color="primary" slot="end" name="chatbubbles"></ion-icon>
+          <ion-icon class="background" color="primary" slot="end" name="add"></ion-icon>
+        </div>
+
+      </ion-item>
+    </ion-card>
+  </div>
+
+
+</ion-content>
