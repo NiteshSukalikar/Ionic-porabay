@@ -42,7 +42,11 @@ const routes: Routes = [
     path: "search",
     loadChildren: () =>
       import("./search/search.module").then((m) => m.SearchPageModule),
+  },  {
+    path: 'notification',
+    loadChildren: () => import('./notification/notification.module').then( m => m.NotificationPageModule)
   },
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
