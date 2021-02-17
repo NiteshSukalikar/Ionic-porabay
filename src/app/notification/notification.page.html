@@ -30,18 +30,14 @@
   </div>
 
   <div class="grid">
-    <ion-grid>
-      <ion-row>
-        <ion-col size="6">
-          <ion-item>
-            <ion-label class="community"> My Community </ion-label></ion-item
-          >
-        </ion-col>
-        <ion-col size="6">
-          <ion-item> <ion-label class="popular"> Popular </ion-label></ion-item>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <ion-segment scrollable value="Messages">
+      <ion-segment-button value="MyCommunity">
+        <ion-label class="person">My Community</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="popular">
+        <ion-label class="person">Popular</ion-label>
+      </ion-segment-button>
+    </ion-segment>
   </div>
 
   <div>
@@ -50,6 +46,7 @@
         <img src="assets/icon/avtar.png" />
       </ion-avatar>
       <ion-label class="name"> Helath & Fitness </ion-label>
+      <ion-badge slot="end" color="light">22 New</ion-badge>
     </ion-item>
 
     <ion-item class="border">
@@ -57,6 +54,7 @@
         <img src="assets/icon/avtar.png" />
       </ion-avatar>
       <ion-label class="name"> Fashion & Beauty </ion-label>
+      <ion-badge slot="end" color="light">22 New</ion-badge>
     </ion-item>
 
     <ion-item class="border">
@@ -64,6 +62,7 @@
         <img src="assets/icon/avtar.png" />
       </ion-avatar>
       <ion-label class="name"> Food Related </ion-label>
+      <ion-badge slot="end" color="light">22 New</ion-badge>
     </ion-item>
 
     <ion-item class="border">
@@ -71,6 +70,7 @@
         <img src="assets/icon/avtar.png" />
       </ion-avatar>
       <ion-label class="name"> Software Engineer's </ion-label>
+      <ion-badge slot="end" color="light">22 New</ion-badge>
     </ion-item>
   </div>
 </ion-content>
