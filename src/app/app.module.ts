@@ -1,18 +1,18 @@
-import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { RouteReuseStrategy } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouteReuseStrategy } from '@angular/router';
 
-import { IonicModule, IonicRouteStrategy } from "@ionic/angular";
-import { SplashScreen } from "@ionic-native/splash-screen/ngx";
-import { StatusBar } from "@ionic-native/status-bar/ngx";
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { MenuItemModule } from "./components/menu-item.module";
-import { DomainDataService } from "./home/domain-data.service";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { ToasterService } from "./shared/toaster.service";
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { MenuItemModule } from './components/menu-item.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToasterService } from './shared/toaster.service';
+import { DomainDataService } from './pages/home/domain-data.service';
 
 @NgModule({
   declarations: [AppComponent],

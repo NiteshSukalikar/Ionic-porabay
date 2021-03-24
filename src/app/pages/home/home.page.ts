@@ -1,15 +1,15 @@
-import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute, NavigationExtras, Router } from "@angular/router";
-import { LoadingService } from "../shared/loader.service";
-import { DomainDataService } from "./domain-data.service";
-import { DomainData } from "./domainData.model";
-import _ from "lodash";
-import { LoadingController } from "@ionic/angular";
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+import { DomainDataService } from './domain-data.service';
+import { DomainData } from './domainData.model';
+import _ from 'lodash';
+import { LoadingController } from '@ionic/angular';
+import { LoadingService } from 'src/app/shared/loader.service';
 
 @Component({
-  selector: "app-home",
-  templateUrl: "home.page.html",
-  styleUrls: ["home.page.scss"],
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
   domainDetails: DomainData[] = [];
@@ -34,20 +34,20 @@ export class HomePage implements OnInit {
 
    fetch() {
     this.presentLoading();
-     this.domainData.fetchDomainData().subscribe((domainData: any) => {
+    this.domainData.fetchDomainData().subscribe((domainData: any) => {
       this.domainDetails = domainData;
     });
-   
+
   }
 
   deleteItem(index) {
     this.loadingService.present({
-      message: "Deleting",
+      message: 'Deleting',
       duration: 2000,
     });
     this.domainData.DeleteDomainData(index).subscribe(
       (domainData) => {
-        if (domainData == true) {
+        if (domainData === true) {
           this.domainDetails = this.domainDetails.filter(
             (item: any) => item.domianID !== index
           );
@@ -55,17 +55,17 @@ export class HomePage implements OnInit {
         this.loadingService.dismiss();
       },
       (error) => {
-        alert("Something went wrong");
+        alert('Something went wrong');
         this.loadingService.dismiss();
       }
     );
   }
 
   onEdit(domainData) {
-    let navigationExtras: NavigationExtras = {
+    const navigationExtras: NavigationExtras = {
       state: { tempData: domainData },
     };
-    this.router.navigate(["tabs/contact"], navigationExtras);
+    this.router.navigate(['tabs/contact'], navigationExtras);
   }
 
 

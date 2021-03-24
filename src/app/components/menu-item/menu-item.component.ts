@@ -1,10 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
-import { Router } from "@angular/router";
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: "app-menu-item",
-  templateUrl: "./menu-item.component.html",
-  styleUrls: ["./menu-item.component.scss"],
+  selector: 'app-menu-item',
+  templateUrl: './menu-item.component.html',
+  styleUrls: ['./menu-item.component.scss'],
 })
 export class MenuItemComponent implements OnInit {
   @Input() link: any;
@@ -13,6 +13,6 @@ export class MenuItemComponent implements OnInit {
   ngOnInit() {}
 
   onMenuChange(data) {
-    this.router.navigate(["/" + data.url]);
+    this.router.navigate(['/' + data.url]);
   }
 }

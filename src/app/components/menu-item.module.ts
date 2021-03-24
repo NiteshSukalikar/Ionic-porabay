@@ -10,7 +10,7 @@ import { MenuItemComponent } from './menu-item/menu-item.component';
     CommonModule,
     FormsModule,
   ],
-  declarations:[MenuItemComponent],
-  exports:[MenuItemComponent]
+  declarations: [MenuItemComponent],
+  exports: [MenuItemComponent]
 })
 export class MenuItemModule {}
