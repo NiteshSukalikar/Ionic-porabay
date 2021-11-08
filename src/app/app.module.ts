@@ -9,10 +9,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuItemModule } from './components/menu-item.module';
+import { MenuItemModule } from './components/menu-item/menu-item.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToasterService } from './shared/toaster.service';
-import { DomainDataService } from './pages/home/domain-data.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,7 +29,6 @@ import { DomainDataService } from './pages/home/domain-data.service';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    DomainDataService,
     ToasterService
   ],
   bootstrap: [AppComponent],

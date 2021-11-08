@@ -5,39 +5,53 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () =>
-      import('./pages/login/login.module').then(
+      import('./auth/login/login.module').then(
         (m) => m.LoginPageModule
       ),
   },
   {
     path: 'sign-up',
     loadChildren: () =>
-      import('./pages/sign-up/sign-up.module').then(
+      import('./auth/sign-up/sign-up.module').then(
         (m) => m.SignUpModule
       ),
   },
-  // {
-  //   path: 'sliders', loadChildren: () =>
-  //     import('./pages/post/post.module').then(
-  //       (m) => m.PostPageModule
-  //     ),
-  // },
+  {
+    path: 'sliders', loadChildren: () =>
+      import('./main/sliders/sliders.module').then(
+        (m) => m.SlidersModule
+      ),
+  },
   {
     path: 'tabs', loadChildren: () =>
-      import('./pages/tabs/tabs.module').then(
+      import('./main/tabs/tabs.module').then(
         (m) => m.TabsPageModule
       ),
   },
   {
     path: 'category',
     loadChildren: () =>
-    import('./pages/category/category.module').then(
+    import('./main/category/category.module').then(
       (m) => m.CategoryModule
     ),
   },
   {
+    path: 'message',
+    loadChildren: () =>
+    import('./main/message/message.module').then(
+      (m) => m.MessageModule
+    ),
+  },
+  {
+    path: 'settings',
+    loadChildren: () =>
+    import('./main/settings/settings.module').then(
+      (m) => m.SettingsPageModule
+    ),
+  },
+  {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'sliders',
     pathMatch: 'full',
   },
 ];

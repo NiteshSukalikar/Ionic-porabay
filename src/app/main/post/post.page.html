@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <p class="h2">Create Tag</p>
+        <p class="h4">Post it !</p>
+      </ion-col>
+      <ion-col size="2">
+        <ion-tab-button tab="home">
+          <ion-icon name="bookmark-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-col>
+      <ion-col size="2">
+        <ion-tab-button tab="home">
+          <ion-icon name="filter-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-col>
+      <ion-col size="2">
+        <ion-tab-button tab="home">
+          <ion-icon name="grid-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating" class="label-header">Add Tag</ion-label>
+          <ion-input placeholder="Enter The Tag" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating" class="label-header">Write The Information Here</ion-label>
+          <ion-textarea rows="4" cols="20" placeholder="Enter Description..."></ion-textarea>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating" class="label-header">Type Post</ion-label>
+          <ion-textarea rows="4" cols="20" placeholder="Enter Post..."></ion-textarea>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+      <!-- image addition -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="arrow-forward-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+
+</ion-content>

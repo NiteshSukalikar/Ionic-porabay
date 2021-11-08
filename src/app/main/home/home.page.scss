@@ -1,0 +1,22 @@
+.spinner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrolling-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    .card {
+        display: inline-block;
+        ion-avatar{
+            margin: 2rem;
+        }
+    }
+}
+.no-scroll .scroll-content{
+    overflow: hidden;
+}

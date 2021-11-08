@@ -11,6 +11,7 @@
 
 /* Core CSS required for Ionic components to work properly */
 @import "~@ionic/angular/css/core.css";
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800|Roboto:400,700');
 
 /* Basic CSS for apps built with Ionic */
 @import "~@ionic/angular/css/normalize.css";
@@ -26,7 +27,61 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 .toaster{
-    --background:var(--ion-color-primary);
+    --background:var(--ion-color-success);
     --color:white;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
+
+h1{
+    font-family: Roboto;
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+h2{
+    font-family: Roboto;
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+h3{
+    font-family: Roboto;
+    color: #1a73e8 !important;
+    font-weight: 600 !important;
+}
+
+h4{
+    font-family: Roboto;
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+h5{
+    font-family: Roboto;
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+h6{
+    font-family: Roboto;
+    color: #1a73e8;
+    font-weight: 600;
+}
+span{
+    font-family: Roboto;
+    color: #1a73e8;
+    font-weight: 300;
+}
+p{
+    font-family: Roboto;
+    color: #1a73e8;
+    font-weight: 300;
+}
+
+ion-toolbar {
+    --background: #1a73e8;
+    --color: white
+  }
+
+
+

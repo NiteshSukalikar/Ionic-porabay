@@ -1,0 +1,14 @@
+ion-item.item-has-focus > ion-label {
+    color: blue !important;
+  }
+  ion-item{
+     ion-label{
+    font-weight: bold;
+    margin-bottom: 15px;
+   }
+  }
+
+  .label-header{
+    font-size: 25px;
+    color: #1a73e8;
+  }
